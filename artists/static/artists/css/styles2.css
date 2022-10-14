@@ -1,0 +1,309 @@
+body{
+    background-color: ##F8F9F9; /* Цвет фона веб-страницы */
+    margin: 0;
+   }
+
+
+
+li{
+    list-style-type: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 165px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    /*background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(70,150,252,0.711922268907563) 77%);*/
+    overflow-x: hidden;
+
+    /*Анимация*/
+        background-color: #1E90FF;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 1s;
+}
+ /*Анимация*/
+@keyframes example {
+    0%   {background-color: #B0C4DE;}
+    /*16%  {background-color: #ADD8E6;}*/
+    32%  {background-color: #ADD8E6;}
+    /*48%  {background-color: #87CEEB;}*/
+    64% {background-color: #87CEFA;}
+    /*80% {background-color: #00BFFF;}*/
+    100% {background-color: #1E90FF;}
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav li {
+    padding: 6px 8px 6px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFC0CB;
+    display: block;
+}
+
+.sidenav li.all_cats {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sidenav a:hover {
+    color: pink;
+}
+
+.sidenav a.my_logo {
+float: left;
+z-index:1;
+padding-right: 10px;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0;
+    font-family: Georgia, Verdana, Arial,Times New Roman
+}
+
+.main p.text_about {
+    font-size:25px;
+    margin: 30px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+/*Верхняя панель навигации*/
+
+.top_navigation_bar ul {
+
+    list-style-type: none;
+    margin-left: 158px;
+    margin-top: 0;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #111;
+    font-size:22px;
+
+}
+
+.top_navigation_bar li {
+    float: left;
+    color:white;
+}
+
+.top_navigation_bar li.not_active {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.top_navigation_bar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+.top_navigation_bar a.exit {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+
+
+/* Change the link color to #111 (black) on hover */
+
+.top_navigation_bar a:hover {
+    background-color: #FF69B4;
+}
+
+.main h1{
+    text-align:center;
+}
+
+
+/*Панель пагинации (переключение страниц)*/
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin-left: 900px;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: #FF69B4;
+    color: white;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+ul.pagination li a {
+    border-radius: 5px;
+}
+
+ul.pagination li a.active {
+    border-radius: 5px;
+}
+
+ul.pagination li a {
+    transition: background-color .3s;
+}
+ul.pagination li a {
+    border: 1px solid #ddd; /* Gray */
+}
+
+.pagination li:first-child a {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/*Таблицы*/
+.my_table {
+    border-spacing: 0 10px;
+    font-family: Georgia, Verdana, Arial,Times New Roman
+    margin:40px;
+    width: 90%;
+}
+
+.my_table a{
+    text-decoration: none;
+    color:black;
+}
+
+.my_table a:hover{
+    color:red;
+}
+
+.my_table td{
+    padding-left: 10px;
+}
+
+.show_post li{
+    padding: 20px 100px;
+}
+
+
+
+
+.form-style-1 {
+	margin:50px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif, Arial;
+}
+
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+
+
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form-style-1 .required{
+	color:red;
+}

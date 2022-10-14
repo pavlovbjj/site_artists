@@ -1,0 +1,56 @@
+{% extends 'artists/base.html' %}
+
+{% block content %}
+<div class="main">
+
+<h1>{{title}}</h1>
+
+    <!--<ul>
+{% for p in posts %}
+
+        <li>
+            {% if p.photo %}
+                <a href="{{ p.get_absolute_url }}"><p><img height="200" src="{{p.photo.url}}" class="img_left"></p> </a>
+            {% endif %}
+            <a href="{{ p.get_absolute_url }}" class = "hr"> <h2>{{p.title}}</h2> </a>
+                <p>{{p.content|linebreaks|truncatewords:50}}</p>
+            <div class="cats_inline">
+            <p class="cats_inline">Категория: {{p.cat}}</p>
+            <p class="cats_inline"> Дата: {{p.time_update|date:"d-m-Y H:i:s"}}</p>
+            </div>
+                    <hr>
+        </li>
+{% endfor %}
+        </ul>-->
+        <table class = "my_table">
+            <tbody>
+        {% for p in posts %}
+        <tr>
+       {% if p.photo %}
+            <td><a href="{{ p.get_absolute_url }}"><img height="200" src="{{p.photo.url}}"></a></td>
+       {% endif %}
+            <td>
+                <a href="{{ p.get_absolute_url }}"> <h2>{{p.title}}</h2> </a>
+                <p class = "hr">{{p.content|linebreaks|truncatewords:50}}</p>
+       <div class="cats_inline">
+            <p class="cats_inline">Категория: {{p.cat}}</p>
+            <p class="cats_inline"> Дата: {{p.time_update|date:"d-m-Y H:i:s"}}</p>
+
+        </div>
+                <hr>
+            </td>
+
+        </tr>
+
+            </tbody>
+
+        {% endfor %}
+
+        </table>
+
+
+
+
+
+</div>
+{% endblock content %}
